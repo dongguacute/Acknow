@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/frontend/app",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter frontend build && mkdir -p ../../dist/frontend && cp -r ./build/client/. ../../dist/frontend/",
+        "cwd": "apps/frontend"
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm --filter frontend dev"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "wrangler pages deploy ./build/client",
+        "cwd": "apps/frontend"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# Ignore everything by default
+*
+
+# Allow necessary files
+!dist/
+!wrangler.toml
+!package.json
+
+# Ignore source files and config files during deployment
+apps/
+node_modules/
+tsconfig.json
+pnpm-workspace.yaml
+pnpm-lock.yaml
+nx.json
+.gitignore
+.nx/
+.cache/

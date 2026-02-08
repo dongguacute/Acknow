@@ -1,0 +1,24 @@
+{
+  "name": "Acknow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nx run-many --target=dev --parallel",
+    "build": "nx run-many --target=build --parallel",
+    "deploy": "wrangler deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260207.0",
+    "@nx/devkit": "^22.4.5",
+    "@nx/js": "^22.4.5",
+    "@nx/vite": "^22.4.5",
+    "@types/node": "^25.2.2",
+    "nx": "22.4.5"
+  }
+}
