@@ -12,10 +12,10 @@
       }
     },
     "dev": {
-      "executor": "@nx/vite:dev-server",
+      "executor": "nx:run-commands",
       "options": {
-        "buildTarget": "backend:build",
-        "port": 3000
+        "command": "pnpm vite",
+        "cwd": "apps/backend"
       }
     },
     "deploy": {

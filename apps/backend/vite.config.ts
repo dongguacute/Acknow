@@ -10,17 +10,21 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  ssr: {
+    noExternal: true,
+  },
   build: {
     minify: true,
     ssr: true,
     rollupOptions: {
       input: resolve(__dirname, 'src/index.ts'),
       external: ['__STATIC_CONTENT_MANIFEST'],
-    output: {
+      output: {
         entryFileNames: 'index.js',
         format: 'es',
       },
     },
+    ssrEmitAssets: true,
     outDir: resolve(__dirname, '../../dist/server'),
     emptyOutDir: true,
   },
